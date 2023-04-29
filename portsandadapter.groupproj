@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{91F8D1F7-32A6-4BE3-AC79-140622BF966C}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="console\porstandadapter.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="test\porstandadapter.test.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="porstandadapter">
+        <MSBuild Projects="console\porstandadapter.dproj"/>
+    </Target>
+    <Target Name="porstandadapter:Clean">
+        <MSBuild Projects="console\porstandadapter.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="porstandadapter:Make">
+        <MSBuild Projects="console\porstandadapter.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="porstandadapter_test">
+        <MSBuild Projects="test\porstandadapter.test.dproj"/>
+    </Target>
+    <Target Name="porstandadapter_test:Clean">
+        <MSBuild Projects="test\porstandadapter.test.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="porstandadapter_test:Make">
+        <MSBuild Projects="test\porstandadapter.test.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="porstandadapter;porstandadapter_test"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="porstandadapter:Clean;porstandadapter_test:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="porstandadapter:Make;porstandadapter_test:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

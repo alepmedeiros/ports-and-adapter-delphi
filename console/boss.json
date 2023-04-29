@@ -1,0 +1,13 @@
+{
+	"name": "console",
+	"description": "",
+	"version": "1.0.0",
+	"homepage": "",
+	"mainsrc": "./",
+	"projects": [],
+	"dependencies": {
+		"github.com/hashload/horse": "^3.1.1",
+		"github.com/hashload/jhonson": "^1.1.6",
+		"https://github.com/viniciussanchez/restrequest4delphi": "^v3.1.0"
+	}
+}

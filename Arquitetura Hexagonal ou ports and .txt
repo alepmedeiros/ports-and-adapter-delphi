@@ -1,0 +1,48 @@
+Inspiracoes
+https://www.youtube.com/watch?v=JufRR4GGkgA Base da palestra
+
+https://www.youtube.com/watch?v=DWsxTJpxaOo&t=3s
+https://www.youtube.com/watch?v=kCSiGeUFi_U&t=214s
+
+Arquitetura Hexagonal ou ports and adapter
+
+Objetivo é construir aplicações que vão se manter de uma forma melhor ao logo do tempo, nós iremos conseguir baixar o custo da manutenção, o objetivo de ter uma boa arquitetura é justamente ter um software melhor, se você quer construir aplicações de grande porte, em ser um desenvolvedor que de exelencia, é importante apreder esses conceitos.
+
+Você acha que arquitetura hexanonal é indispensavel hoje em dia para o desenvolvimento, ou você acha que ainda consiga construir aplicações sem utilizar esse tipos de arquitetura e tenha uma aplicação sustentável, com baixo custo na manutenção.
+
+Exemplo de um estacionamento, com entrada e saida, calcula o valor a ser pago.
+
+Quando começamos a desenvolver, diante de uma tela em branco, devemos tomar uma decisão qual caminho seguir, é importante que busquemos experiencias profissionais e comecemos algo do zero.
+
+Por que essa experiencia é relevante?
+
+Você irá estar em uma possição, que irá te levar a tomar certas desições, e essas desições tem um custo e um beneficio, então de certa forma, agraga consideralmente na sua carreira.
+
+Vamos para um modelagem simples:
+
+Depomos olhar para caso de uso, que são o que entregamos de fato para o usuário final.
+
+Então vamos lá:
+
+Eu tenho:
+	Carro estacionado
+Esse carro estacionado, ele entra no estacionamento
+
+domain: 
+
+parked car
+
+uses cases: (algo super neutro) aqui é api que a sua aplicação expoe, não é a api webservice, que você está usando
+
+check-in (placa)
+checkout (placa)
+getParkedCars
+
+
+o correto é começarmos orientado a teste, mas niguem de fato começa a implementar orientado a teste.
+
+as pessoas no dia a dia tem muita necessidade de conectarem as pontas, isso é um mal, muita vezes nós temos essa inclunação de querer ver a coisa funcionando de ponta a ponta, e isso faz com que nós atropelamos as coisas.
+
+
+começar a implementação que muitos já começam:
+

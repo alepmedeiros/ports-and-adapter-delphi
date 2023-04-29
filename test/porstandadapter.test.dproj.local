@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2023/04/28 11:39:25.000.587,=C:\Users\aleme\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2023/04/28 11:40:08.000.152,C:\Users\aleme\OneDrive\Documentos\Embarcadero\Studio\Projects\Project1.dproj=C:\Users\aleme\OneDrive\Documentos\Embarcadero\Studio\Projects\porstandadapter.test.dproj</Transaction>
+    <Transaction>2023/04/28 11:41:13.000.484,C:\Users\aleme\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.pas=D:\MyRepository\ports-and-adapter-delphi\test\portsandadpter.test.pas</Transaction>
+    <Transaction>2023/04/28 11:41:22.000.061,C:\Users\aleme\OneDrive\Documentos\Embarcadero\Studio\Projects\porstandadapter.test.dproj=D:\MyRepository\ports-and-adapter-delphi\test\porstandadapter.test.dproj</Transaction>
+  </Transactions>
+</BorlandProject>
