@@ -34,8 +34,8 @@ parked car
 
 uses cases: (algo super neutro) aqui é api que a sua aplicação expoe, não é a api webservice, que você está usando
 
-check-in (placa)
-checkout (placa)
+check-in (placa) ok
+checkout (placa) : price
 getParkedCars
 
 
@@ -46,3 +46,17 @@ as pessoas no dia a dia tem muita necessidade de conectarem as pontas, isso é u
 
 começar a implementação que muitos já começam:
 
+criar um projeto do zero, seguindo a ideia rad, e a forma erronea que muitos já fazem
+
+vamos falar um pouco sobre ports and adapters
+
+qual é o grande centro de ports and adapters?
+
+a principal ideia é que você tenha uma aplicação que pode ser guiada por clientes diferentes, esse é um dos pontos.
+
+como é que sou guiado por clientes diferente, eu posso ter uma api, posso ter uma fila, posso ter um CLI, uma user interface, diversos clientes.
+
+Essa aplicação do jeito que está escrita, ela é guiavel por varios cliente? Não, ela só é guiada pela api, regras de negocio estão escritas na api
+
+Quando pensamos em regra de negocio, podemos levar algumas coisas para a api, que é o seguinte:
+quando saio com o carro, eu devo localizar, o checkout eu tenho que ideitificar um carro para que eu retorne um preço, pelo tempo que o carro permaneceu parado

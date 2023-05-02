@@ -51,7 +51,7 @@ begin
   TRequest.New.BaseURL('http://localhost:9000')
     .Accept('application/json')
     .Resource('/checking')
-    .AddBody('{"plate": "AAA-0099" }')
+    .AddBody('{"plate": "AAA-0099","checkinDate": "2023-04-02T10:00"}')
     .Post.StatusCode;
 
   Assert.AreEqual(200, checking);
@@ -83,7 +83,7 @@ begin
   TRequest.New.BaseURL('http://localhost:9000')
     .Accept('application/json')
     .Resource('/checkout')
-    .AddBody('{"plate": "AAA-0099" }')
+    .AddBody('{"plate": "AAA-0099", "checkoutDate": "2023-04-02T12:00"}')
     .Post.StatusCode;
 
   Assert.AreEqual(200, checkout);

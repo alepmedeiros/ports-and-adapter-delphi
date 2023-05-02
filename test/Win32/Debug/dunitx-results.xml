@@ -1,15 +1,33 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
-<test-results name="D:\MyRepository\ports-and-adapter-delphi\test\Win32\Debug\porstandadapter.test.exe" total="3" errors="0" failures="0" ignored="0" inconclusive="0" not-run="0" skipped="0" invalid="0" date="2023-05-02" time="2.860">
+<test-results name="D:\MyRepository\ports-and-adapter-delphi\test\Win32\Debug\porstandadapter.test.exe" total="3" errors="0" failures="2" ignored="0" inconclusive="0" not-run="0" skipped="0" invalid="0" date="2023-05-02" time="6.427">
   <culture-info current-culture="en" current-uiculture="en" />
-  <test-suite type="Assembly" name="porstandadapter.test.exe" executed="true" result="Success" success="True" time="2.860" asserts="0">
+  <test-suite type="Assembly" name="porstandadapter.test.exe" executed="true" result="Failure" success="False" time="6.427" asserts="0">
     <results>
-        <test-suite type="Namespace" name="portsandadpter" executed="true" result="Success" success="True" time="2.860" asserts="0" >
+        <test-suite type="Namespace" name="portsandadpter" executed="true" result="Failure" success="False" time="6.426" asserts="0" >
           <results>
-              <test-suite type="Fixture" name="TAPITest" executed="True" result="Success" success="True" time="2.860" >
+              <test-suite type="Fixture" name="TAPITest" executed="True" result="Failure" success="False" time="6.426" >
                 <results>
-                  <test-case name="DeveExecutarCheckinCarro" executed="True" result="Success" success="True" time="0.359" asserts="0" />
-                  <test-case name="DeveVerificarCarroEstacionado" executed="True" result="Success" success="True" time="2.489" asserts="0" />
-                  <test-case name="RetirarCarroEstacionado" executed="True" result="Success" success="True" time="0.007" asserts="0" />
+                  <test-case name="DeveExecutarCheckinCarro" executed="True" result="Failure" success="False" time="3.346" asserts="0" >
+                    <failure>
+                      <message>
+                        <![CDATA[ Expected 200 but got 500  ]]>
+                      </message>
+                      <stack-trace>
+                        <![CDATA[  ]]>
+                      </stack-trace>
+                    </failure>
+                  </test-case>
+                  <test-case name="DeveVerificarCarroEstacionado" executed="True" result="Success" success="True" time="1.635" asserts="0" />
+                  <test-case name="RetirarCarroEstacionado" executed="True" result="Failure" success="False" time="1.440" asserts="0" >
+                    <failure>
+                      <message>
+                        <![CDATA[ Expected 200 but got 500  ]]>
+                      </message>
+                      <stack-trace>
+                        <![CDATA[  ]]>
+                      </stack-trace>
+                    </failure>
+                  </test-case>
                 </results>
               </test-suite>
           </results>

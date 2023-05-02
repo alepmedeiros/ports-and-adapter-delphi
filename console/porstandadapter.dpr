@@ -10,6 +10,7 @@ uses
   System.JSON,
   Data.DB,
   System.SysUtils,
+  System.DateUtils,
   DataSet.Serialize,
   connection in 'connection.pas' {DataModule1: TDataModule};
 
@@ -32,8 +33,9 @@ begin
       lBody := TJSONObject.ParseJSONValue(Req.Body) as TJsonObject;
 
       lConnection.FDQuery1.SQl.Clear;
-      lConnection.FDQuery1.SQL.Add('insert into parcked_car (plate) values (?)');
+      lConnection.FDQuery1.SQL.Add('insert into parcked_car (plate, checkin_date) values (?, ?)');
       lConnection.FDQuery1.Params[0].Value := lBody.GetValue<String>('plate');
+      lConnection.FDQuery1.Params[0].Value := lBody.GetValue<String>('checkinDate');
       lConnection.FDQuery1.ExecSQL;
 
       Res.Status(200);
@@ -74,6 +76,18 @@ begin
     lConnection:= connection.TDataModule1.Create(nil);
     try
       lBody := TJSONObject.ParseJSONValue(Req.Body) as TJsonObject;
+
+      lConnection.FDQuery1.Close;
+      lConnection.FDQuery1.SQl.Clear;
+      lConnection.FDQuery1.SQL.Add('select * from parcked_car where plate = ? and checkout is null limit 1');
+      lConnection.FDQuery1.Params[0].Value := lBody.GetValue<String>('plate');
+      lConnection.FDQuery1.Open();
+
+      var chekingDate: TDateTime := lConnection.FDQuery1.FieldByName('checkin_date').AsDateTime;
+      var checkoutDate: TDateTime := ISO8601ToDate(lBody.GetValue<String>('checkoutDate'));
+
+      Writeln(chekingDate);
+      Writeln(checkoutDate);
 
       lConnection.FDQuery1.Close;
       lConnection.FDQuery1.SQl.Clear;
