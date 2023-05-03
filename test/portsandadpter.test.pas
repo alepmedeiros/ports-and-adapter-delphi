@@ -5,7 +5,8 @@ interface
 uses
   DUnitX.TestFramework,
   RESTRequest4D,
-  System.SysUtils;
+  System.SysUtils,
+  System.JSON;
 
 type
   [TestFixture]
@@ -51,7 +52,7 @@ begin
   TRequest.New.BaseURL('http://localhost:9000')
     .Accept('application/json')
     .Resource('/checking')
-    .AddBody('{"plate": "AAA-0099","checkinDate": "2023-04-02T10:00"}')
+    .AddBody('{"plate": "AAA-0099","checkinDate": "2023-05-02T10:00Z"}')
     .Post.StatusCode;
 
   Assert.AreEqual(200, checking);
@@ -79,14 +80,19 @@ end;
 
 procedure TAPITest.RetirarCarroEstacionado;
 begin
-  var checkout: Integer :=
+  var checkout: String :=
   TRequest.New.BaseURL('http://localhost:9000')
     .Accept('application/json')
     .Resource('/checkout')
-    .AddBody('{"plate": "AAA-0099", "checkoutDate": "2023-04-02T12:00"}')
-    .Post.StatusCode;
+    .AddBody('{"plate": "AAA-0099", "checkoutDate": "2023-05-03T12:00Z"}')
+    .Post.Content;
 
-  Assert.AreEqual(200, checkout);
+  writeln(checkout);
+
+  var lJSON: TJSONObject := TJSONObject.ParseJSONValue(checkout) as TJsonObject;
+
+  Assert.AreEqual('20', lJSON.GetValue<String>('price'));
+  Assert.AreEqual('2', lJSON.GetValue<String>('diff'));
 end;
 
 // o teste de que seguir o padrão chamado:
