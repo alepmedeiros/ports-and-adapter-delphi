@@ -52,7 +52,7 @@ begin
   TRequest.New.BaseURL('http://localhost:9000')
     .Accept('application/json')
     .Resource('/checking')
-    .AddBody('{"plate": "AAA-0099","checkinDate": "2023-05-02T10:00Z"}')
+    .AddBody('{"plate": "AAA-0099","checkindate": "2023-05-02T10:00Z"}')
     .Post.StatusCode;
 
   Assert.AreEqual(200, checking);
@@ -84,7 +84,7 @@ begin
   TRequest.New.BaseURL('http://localhost:9000')
     .Accept('application/json')
     .Resource('/checkout')
-    .AddBody('{"plate": "AAA-0099", "checkoutDate": "2023-05-03T12:00Z"}')
+    .AddBody('{"plate": "AAA-0099", "checkoutdate": "2023-05-03T12:00Z"}')
     .Post.Content;
 
   writeln(checkout);
@@ -92,7 +92,7 @@ begin
   var lJSON: TJSONObject := TJSONObject.ParseJSONValue(checkout) as TJsonObject;
 
   Assert.AreEqual('20', lJSON.GetValue<String>('price'));
-  Assert.AreEqual('2', lJSON.GetValue<String>('diff'));
+  Assert.AreEqual('2', lJSON.GetValue<String>('period'));
 end;
 
 // o teste de que seguir o padrão chamado:

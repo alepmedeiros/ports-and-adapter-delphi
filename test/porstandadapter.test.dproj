@@ -105,7 +105,6 @@
         <DelphiCompile Include="$(MainSource)">
             <MainSource>MainSource</MainSource>
         </DelphiCompile>
-        <DCCReference Include="portsandadpter.checking.test.pas"/>
         <DCCReference Include="..\console\connection.pas">
             <Form>DataModule1</Form>
             <FormType>dfm</FormType>
@@ -115,6 +114,7 @@
         <DCCReference Include="..\console\portsandadapter.checkout.pas"/>
         <DCCReference Include="..\console\portsandadapter.getparkedcars.pas"/>
         <DCCReference Include="..\console\portsandadapter.input.pas"/>
+        <DCCReference Include="portsandadpter.test.pas"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>

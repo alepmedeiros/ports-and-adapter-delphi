@@ -4,6 +4,16 @@ https://www.youtube.com/watch?v=JufRR4GGkgA Base da palestra
 https://www.youtube.com/watch?v=DWsxTJpxaOo&t=3s
 https://www.youtube.com/watch?v=kCSiGeUFi_U&t=214s
 
+
+para apresentações
+https://engsoftmoderna.info/artigos/arquitetura-hexagonal.html#:~:text=Uma%20Arquitetura%20Hexagonal%20divide%20as,tais%20como%20bancos%20de%20dados).
+https://br.sensedia.com/post/use-of-the-hexagonal-architecture-pattern
+https://medium.com/tableless/desvendando-a-arquitetura-hexagonal-52c56f8824c
+https://medium.com/@pjbgf/title-testing-code-ocd-and-the-aaa-pattern-df453975ab80
+
+https://www.youtube.com/watch?v=or5zAOASPjU
+
+
 Arquitetura Hexagonal ou ports and adapter
 
 Objetivo é construir aplicações que vão se manter de uma forma melhor ao logo do tempo, nós iremos conseguir baixar o custo da manutenção, o objetivo de ter uma boa arquitetura é justamente ter um software melhor, se você quer construir aplicações de grande porte, em ser um desenvolvedor que de exelencia, é importante apreder esses conceitos.
@@ -93,3 +103,24 @@ getParkedCars
 
 a partir desse momento eu mudo completamente a interface, porque agora eu posso ter um checking de teste, não mais por meio de um client especifico, mas pela camada de aplicação, na borda do hexagono.
 Se pensarmos no hexagono, as bordas que ele tem, uma delas é o checking
+
+
+============================================================================================
+Gatilho da refatoração que irá acontecer nesse momento
+
+Foi falado que poderiamos ter diversos clientes conduzindo a aplicação que é o lado que mostro na figura
+
+onde do lado esquedo temos os drivers side, que é uma pessoa, testes case, uma fila, um app mobile, coisas que podem guiar.
+
+Nesse momento conseguimos alcançar esse ponto, eu tenho dependecia da borda da aplicação, das portas que estão sendo expostas.
+
+Quando estou dentro da minha api, eu preciso mudar algumas coisas, onde o que estavamos fazendo não tem mais a necessidade de utiliza-las.
+
+E o que eu tenho que fazer para mudar isso agora?  
+
+aqui nós claramente exercitamos a possibilidade de trabalhar com dois clientes guiando a aplicação.
+
+com damos uma flexibilizada na nossa aplicação, eu ainda estou em teste de integração, mas estou em menos camadas
+
+================================================================================================
+
