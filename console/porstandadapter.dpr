@@ -19,7 +19,8 @@ uses
   portsandadapter.input in 'portsandadapter.input.pas',
   portsandadapter.parkedcarrepository in 'portsandadapter.parkedcarrepository.pas',
   portsandadapter.parkedcar in 'portsandadapter.parkedcar.pas',
-  portsandadapter.parkedcardatabaserepository in 'portsandadapter.parkedcardatabaserepository.pas';
+  portsandadapter.parkedcardatabaserepository in 'portsandadapter.parkedcardatabaserepository.pas',
+  portsandadapter.parkedcarmemoryrepository in 'portsandadapter.parkedcarmemoryrepository.pas';
 
 var
   App: THorse;

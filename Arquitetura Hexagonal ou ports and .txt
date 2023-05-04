@@ -10,6 +10,7 @@ https://engsoftmoderna.info/artigos/arquitetura-hexagonal.html#:~:text=Uma%20Arq
 https://br.sensedia.com/post/use-of-the-hexagonal-architecture-pattern
 https://medium.com/tableless/desvendando-a-arquitetura-hexagonal-52c56f8824c
 https://medium.com/@pjbgf/title-testing-code-ocd-and-the-aaa-pattern-df453975ab80
+https://mbagrat.com/architecture/the-pattern-ports-and-adapters-hexagonal-architecture/
 
 https://www.youtube.com/watch?v=or5zAOASPjU
 
@@ -148,3 +149,24 @@ fizemos todas as implementações e refatoramos bastante coisa para chegamos ao 
 
 ===================================================================================================
 
+Em que é estamos no momento, na imagem
+
+Sobre a ótica de ports and adapters, nós estamos bem, porque eu tornei independente, quem está guiando a aplicação, e como a aplicação é guiada.
+
+tanto que, concorda que, podemos criar um ambiente de teste usando memory, sem ter que usar diretamente a nossa aplicação.
+
+fizemos de forma simples, e nesse momento temos que ser capazes de alterar a inversão de dependencia, sem que atrapalhe o fluxo dos testes
+
+o momento que eu inverto essa dependencia, e recebo essas dependencias dentro do meu usecase posso fazer o que bem entender, isso me tras segurança, me tras agilidades no teste.
+
+eu não posso pegar uma api de produçõa de pagamentos e fazer o teste nela, eu irei usar algum fake.
+
+e ai polimorficamente eu consigo passar uma dependencia diferente.
+
+ai eu volto para dentro do hexagono.
+
+nesse momento não estamos usando DDD, nem clean arch, não temos uma papel de uma entity, essas regras não são reuzaveis, elas não são jogadas dentro de um usecase, e ai ao olharmos para a imagem do clean arch
+
+ai ao olharmos para a camada freamworks and drivers o horse, fdconnection, dentro da camada verde, não separamos ela mas temos os repositorios, poderiamos ter um roteador, e na camada vermelha os usescases, e no meio entitys, mas não temos as entitys, não estamos reusando nada.
+
+=====================================================================================================

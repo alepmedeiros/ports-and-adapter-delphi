@@ -4,6 +4,7 @@ interface
 
 uses
   System.JSON,
+  System.SysUtils,
   System.Generics.Collections,
   GBJSON.Interfaces;
 

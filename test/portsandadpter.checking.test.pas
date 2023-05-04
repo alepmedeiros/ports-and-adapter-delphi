@@ -13,7 +13,7 @@ uses
   GBJSON.Interfaces,
   portsandadapter.parkedcar,
   portsandadapter.parkedcardatabaserepository,
-  portsandadapter.parkedcarrepository;
+  portsandadapter.parkedcarrepository, portsandadapter.parkedcarmemoryrepository;
 
 type
 
@@ -36,7 +36,11 @@ procedure TAPITest.DeveFazerUmCheckin;
 begin
     // agora iremos criar as chamadas para o repository, onde passamos a dependecia
     // via inversão
-  var parkedCar := TParkedCarRepository.New;
+
+//  var parkedCar := TParkedCarRepository.New;
+// neste momento alteramos para memoria, para que não tenhamos a dependencia de
+// persistencia no banco de dados
+  var parkedCar := TParkedCarMemoryRepository.New;
 
   var
     lCheckin: TCheckin := TCheckin.New(parkedCar);

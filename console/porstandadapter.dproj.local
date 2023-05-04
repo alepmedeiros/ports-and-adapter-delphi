@@ -4,8 +4,8 @@
     <Transaction>2023/04/28 11:33:05.000.713,C:\Users\aleme\OneDrive\Documentos\Embarcadero\Studio\Projects\porstandadapter.dproj=C:\Users\aleme\OneDrive\Documentos\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
     <Transaction>2023/04/28 11:33:27.000.087,D:\MyRepository\ports-and-adapter-delphi\console\porstandadapter.dproj=C:\Users\aleme\OneDrive\Documentos\Embarcadero\Studio\Projects\porstandadapter.dproj</Transaction>
     <Transaction>2023/04/28 12:49:27.000.801,=D:\MyRepository\ports-and-adapter-delphi\console\Unit1.pas</Transaction>
-    <Transaction>2023/04/28 12:50:52.000.420,D:\MyRepository\ports-and-adapter-delphi\console\connection.pas=D:\MyRepository\ports-and-adapter-delphi\console\Unit1.pas</Transaction>
     <Transaction>2023/04/28 12:50:52.000.420,D:\MyRepository\ports-and-adapter-delphi\console\connection.dfm=D:\MyRepository\ports-and-adapter-delphi\console\Unit1.dfm</Transaction>
+    <Transaction>2023/04/28 12:50:52.000.420,D:\MyRepository\ports-and-adapter-delphi\console\connection.pas=D:\MyRepository\ports-and-adapter-delphi\console\Unit1.pas</Transaction>
     <Transaction>2023/05/03 13:09:34.000.932,=D:\MyRepository\ports-and-adapter-delphi\console\Unit1.pas</Transaction>
     <Transaction>2023/05/03 13:09:59.000.156,D:\MyRepository\ports-and-adapter-delphi\console\portsandadapter.checking.pas=D:\MyRepository\ports-and-adapter-delphi\console\Unit1.pas</Transaction>
     <Transaction>2023/05/03 17:20:05.000.272,=D:\MyRepository\ports-and-adapter-delphi\console\Unit1.pas</Transaction>
@@ -14,9 +14,9 @@
     <Transaction>2023/05/03 17:22:35.000.745,D:\MyRepository\ports-and-adapter-delphi\console\Unit1.pas=D:\MyRepository\ports-and-adapter-delphi\console\portsandadapter.input.pas</Transaction>
     <Transaction>2023/05/03 17:30:49.000.436,=D:\MyRepository\ports-and-adapter-delphi\console\Unit1.pas</Transaction>
     <Transaction>2023/05/03 17:33:46.000.969,D:\MyRepository\ports-and-adapter-delphi\console\Unit1.pas=D:\MyRepository\ports-and-adapter-delphi\console\portsandadapter.checkout.pas</Transaction>
-    <Transaction>2023/05/03 17:38:59.000.171,=D:\MyRepository\ports-and-adapter-delphi\console\portsandadapter.getparkedcars.pas</Transaction>
     <Transaction>2023/05/03 17:38:59.000.137,=D:\MyRepository\ports-and-adapter-delphi\console\portsandadapter.checkout.pas</Transaction>
     <Transaction>2023/05/03 17:38:59.000.224,=D:\MyRepository\ports-and-adapter-delphi\console\portsandadapter.input.pas</Transaction>
+    <Transaction>2023/05/03 17:38:59.000.171,=D:\MyRepository\ports-and-adapter-delphi\console\portsandadapter.getparkedcars.pas</Transaction>
     <Transaction>2023/05/03 17:39:08.000.229,=D:\MyRepository\ports-and-adapter-delphi\console\Unit1.pas</Transaction>
     <Transaction>2023/05/04 10:25:09.000.438,=D:\MyRepository\ports-and-adapter-delphi\console\Unit1.pas</Transaction>
     <Transaction>2023/05/04 11:24:07.074,=D:\MyRepository\ports-and-adapter-delphi\console\Unit1.pas</Transaction>
@@ -25,6 +25,8 @@
     <Transaction>2023/05/04 11:29:10.788,D:\MyRepository\ports-and-adapter-delphi\console\portsandadapter.parkedcar.pas=D:\MyRepository\ports-and-adapter-delphi\console\Unit1.pas</Transaction>
     <Transaction>2023/05/04 13:13:09.082,=D:\MyRepository\ports-and-adapter-delphi\console\Unit1.pas</Transaction>
     <Transaction>2023/05/04 13:13:24.520,D:\MyRepository\ports-and-adapter-delphi\console\portsandadapter.parkedcardatabaserepository.pas=D:\MyRepository\ports-and-adapter-delphi\console\Unit1.pas</Transaction>
+    <Transaction>2023/05/04 14:19:04.160,=D:\MyRepository\ports-and-adapter-delphi\console\Unit1.pas</Transaction>
+    <Transaction>2023/05/04 14:20:42.396,D:\MyRepository\ports-and-adapter-delphi\console\portsandadapter.parkedcarmemoryrepository.pas=D:\MyRepository\ports-and-adapter-delphi\console\Unit1.pas</Transaction>
   </Transactions>
 	<ProjectSortOrder AutoSort="0" SortType="0">
     <File Path="connection.pas"/>
@@ -36,5 +38,6 @@
     <File Path="portsandadapter.parkedcarrepository.pas"/>
     <File Path="portsandadapter.parkedcar.pas"/>
     <File Path="portsandadapter.parkedcardatabaserepository.pas"/>
+    <File Path="portsandadapter.parkedcarmemoryrepository.pas"/>
   </ProjectSortOrder>
 </BorlandProject>

@@ -149,6 +149,7 @@
         <DCCReference Include="portsandadapter.parkedcarrepository.pas"/>
         <DCCReference Include="portsandadapter.parkedcar.pas"/>
         <DCCReference Include="portsandadapter.parkedcardatabaserepository.pas"/>
+        <DCCReference Include="portsandadapter.parkedcarmemoryrepository.pas"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>
