@@ -124,3 +124,27 @@ com damos uma flexibilizada na nossa aplicação, eu ainda estou em teste de int
 
 ================================================================================================
 
+Agora se começarmos a olhar, existe um outro lado que é o driven side, se você observar, é como se tivessemos dois lado, um primario  e o outro secundário.
+
+o guia, e o que é guiado.
+
+do lado direito nós temos, uma série de dispositivos de entrada e saida, dispositivos de IO, dependencia de sistema operacional, e muito mais, entenda isso como filesystem, uma api que iremos usar, um banco de dados, qualquer coisa que você irá guiar.
+
+na nossa aplicação, ainda que estejamos testando o use case de forma isolada, ainda que estejamos testando a borda da aplicação, eu não tenho a flexibilidade de dizer, não usa o banco de dados, ele vem junto e não se desasocia.
+
+nós sabemos, assim espero que você saiba né, que não é uma boa prática misturarmos SQL com regra de negocio, igual fizemos, mas ainda que nós separemos, nem sempre conseguimos isolar esses mundos.
+
+Nós não estamos necessáriamente usando Domain Driven Design, uma das coisas que o proprio Alistair Cockburn fala, é que, o que tem dentro do hexagonal, ele uma vez respondeu, tanto faz, o que você quiser, não precisa necessáriamente DDD
+não precisa ser necessáriamente uma abordagem parecida clean archteture, você pode ter um código procedural do jeito que fiz.
+
+Agora esse acoplamento com sql, ele está indo contra, dai eu não tenho independencia do mecanismo de entrada e saida.
+
+depois de quebrarmos todos as classes, corrigindo, agora chegou a hora de criarmos a dependencia.
+
+agora gerei a dependencia, que podemos ver do lado direito da nossa imagem
+
+fizemos todas as implementações e refatoramos bastante coisa para chegamos ao padrão que estamos querendo
+
+
+===================================================================================================
+

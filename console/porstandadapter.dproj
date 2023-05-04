@@ -146,6 +146,9 @@
         <DCCReference Include="portsandadapter.checkout.pas"/>
         <DCCReference Include="portsandadapter.getparkedcars.pas"/>
         <DCCReference Include="portsandadapter.input.pas"/>
+        <DCCReference Include="portsandadapter.parkedcarrepository.pas"/>
+        <DCCReference Include="portsandadapter.parkedcar.pas"/>
+        <DCCReference Include="portsandadapter.parkedcardatabaserepository.pas"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>

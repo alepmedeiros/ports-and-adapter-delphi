@@ -10,7 +10,10 @@ uses
   portsandadapter.input,
   portsandadapter.getparkedcars,
   portsandadapter.checkout,
-  GBJSON.Interfaces;
+  GBJSON.Interfaces,
+  portsandadapter.parkedcar,
+  portsandadapter.parkedcardatabaserepository,
+  portsandadapter.parkedcarrepository;
 
 type
 
@@ -31,8 +34,12 @@ implementation
 
 procedure TAPITest.DeveFazerUmCheckin;
 begin
+    // agora iremos criar as chamadas para o repository, onde passamos a dependecia
+    // via inversão
+  var parkedCar := TParkedCarRepository.New;
+
   var
-    lCheckin: TCheckin := TCheckin.New;
+    lCheckin: TCheckin := TCheckin.New(parkedCar);
 
   TGBJSONConfig.GetInstance.CaseDefinition(TCaseDefinition.cdLower);
   var
@@ -42,7 +49,7 @@ begin
   lCheckin.execute(lInput);
 
   var
-    getparkedcars: TGetParkedCars := TGetParkedCars.New;
+    getparkedcars: TGetParkedCars := TGetParkedCars.New(parkedCar);
 
   var
     parkedCars: TJSONArray := getparkedcars.execute();
@@ -52,10 +59,11 @@ begin
   TGBJSONConfig.GetInstance.CaseDefinition(TCaseDefinition.cdLower);
   var
     inputCheckout: TInput := TGBJSONDefault.Serializer<TInput>.
-      JsonStringToObject('{"plate": "AAA-9999", "checkoutdate": "2023-05-03T12:00Z"}');
+      JsonStringToObject
+      ('{"plate": "AAA-9999", "checkoutdate": "2023-05-03T12:00Z"}');
 
   var
-    checkout: TCheckout := TCheckout.New;
+    checkout: TCheckout := TCheckout.New(parkedCar);
 
   var
     ticket: TOutPut := checkout.execute(inputCheckout);

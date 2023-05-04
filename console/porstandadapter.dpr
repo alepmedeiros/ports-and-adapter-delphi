@@ -16,7 +16,10 @@ uses
   portsandadapter.checking in 'portsandadapter.checking.pas',
   portsandadapter.checkout in 'portsandadapter.checkout.pas',
   portsandadapter.getparkedcars in 'portsandadapter.getparkedcars.pas',
-  portsandadapter.input in 'portsandadapter.input.pas';
+  portsandadapter.input in 'portsandadapter.input.pas',
+  portsandadapter.parkedcarrepository in 'portsandadapter.parkedcarrepository.pas',
+  portsandadapter.parkedcar in 'portsandadapter.parkedcar.pas',
+  portsandadapter.parkedcardatabaserepository in 'portsandadapter.parkedcardatabaserepository.pas';
 
 var
   App: THorse;
@@ -26,11 +29,15 @@ begin
   App
   .Use(Jhonson);
 
+  // agora iremos criar as chamadas para o repository, onde passamos a dependecia
+  // via inversão
+  var parkedCar := TParkedCarRepository.New;
+
   App
   .Post('/checking', procedure(Req: THorseRequest; Res: THorseResponse)
   begin
     // observe que mudamos toda uma estrutura de uma forma muito melhor
-    var checkin: TCheckin := TCheckin.New;
+    var checkin: TCheckin := TCheckin.New(parkedCar);
     checkin.Execute(TInput.New.ToObject(Req.Body));
     Res.Status(200);
   end);
@@ -41,7 +48,7 @@ begin
   begin
     // olha como a possibilidade de usar variaveis inline ajuda na hora de trabalhar,
     // e observe como o nosso codigo ficou bem melhor e de facil aplicabilidade
-    var parkedCars := TGetParkedCars.New.Execute;
+    var parkedCars := TGetParkedCars.New(parkedCar).Execute;
     Res.Send<TJsonArray>(parkedCars);
   end);
 
@@ -51,7 +58,7 @@ begin
   begin
     // observe o quanto de mudança foi feita, e o quanto para dentro da aplicação
     // estamos?
-    var ticket := TCheckout.New
+    var ticket := TCheckout.New(parkedCar)
       .Execute(TInput.New.ToObject(Req.Body));
 
     Res.Send<TJSONObject>(ticket.ToJSON);
