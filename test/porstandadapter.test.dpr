@@ -13,7 +13,12 @@ uses
   DUnitX.Loggers.Xml.NUnit,
   {$ENDIF }
   DUnitX.TestFramework,
-  portsandadpter.test in 'portsandadpter.test.pas';
+  portsandadpter.checking.test in 'portsandadpter.checking.test.pas',
+  connection in '..\console\connection.pas' {DataModule1: TDataModule},
+  portsandadapter.checking in '..\console\portsandadapter.checking.pas',
+  portsandadapter.checkout in '..\console\portsandadapter.checkout.pas',
+  portsandadapter.getparkedcars in '..\console\portsandadapter.getparkedcars.pas',
+  portsandadapter.input in '..\console\portsandadapter.input.pas';
 
 {$IFNDEF TESTINSIGHT}
 var

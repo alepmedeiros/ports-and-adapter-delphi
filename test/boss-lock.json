@@ -10,6 +10,14 @@
 			"failed": false,
 			"changed": false
 		},
+		"https://github.com/gabrielbaltazar/gbjson": {
+			"name": "gbjson",
+			"version": "1.0.11",
+			"hash": "9f3f8d23501e9249638dd6a332a536c0",
+			"artifacts": {},
+			"failed": false,
+			"changed": false
+		},
 		"https://github.com/viniciussanchez/restrequest4delphi": {
 			"name": "restrequest4delphi",
 			"version": "v3.1.0",

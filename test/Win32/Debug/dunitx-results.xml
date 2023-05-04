@@ -1,15 +1,13 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
-<test-results name="D:\MyRepository\ports-and-adapter-delphi\test\Win32\Debug\porstandadapter.test.exe" total="3" errors="0" failures="0" ignored="0" inconclusive="0" not-run="0" skipped="0" invalid="0" date="2023-05-03" time="0.289">
+<test-results name="D:\MyRepository\ports-and-adapter-delphi\test\Win32\Debug\porstandadapter.test.exe" total="1" errors="0" failures="0" ignored="0" inconclusive="0" not-run="0" skipped="0" invalid="0" date="2023-05-04" time="41.396">
   <culture-info current-culture="en" current-uiculture="en" />
-  <test-suite type="Assembly" name="porstandadapter.test.exe" executed="true" result="Success" success="True" time="0.289" asserts="0">
+  <test-suite type="Assembly" name="porstandadapter.test.exe" executed="true" result="Success" success="True" time="41.396" asserts="0">
     <results>
-        <test-suite type="Namespace" name="portsandadpter" executed="true" result="Success" success="True" time="0.289" asserts="0" >
+        <test-suite type="Namespace" name="portsandadpter" executed="true" result="Success" success="True" time="41.395" asserts="0" >
           <results>
-              <test-suite type="Fixture" name="TAPITest" executed="True" result="Success" success="True" time="0.289" >
+              <test-suite type="Fixture" name="TAPITest" executed="True" result="Success" success="True" time="41.395" >
                 <results>
-                  <test-case name="DeveExecutarCheckinCarro" executed="True" result="Success" success="True" time="0.191" asserts="0" />
-                  <test-case name="DeveVerificarCarroEstacionado" executed="True" result="Success" success="True" time="0.046" asserts="0" />
-                  <test-case name="RetirarCarroEstacionado" executed="True" result="Success" success="True" time="0.050" asserts="0" />
+                  <test-case name="DeveFazerUmCheckin" executed="True" result="Success" success="True" time="41.393" asserts="0" />
                 </results>
               </test-suite>
           </results>

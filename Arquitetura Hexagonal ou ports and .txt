@@ -60,3 +60,36 @@ Essa aplicação do jeito que está escrita, ela é guiavel por varios cliente? 
 
 Quando pensamos em regra de negocio, podemos levar algumas coisas para a api, que é o seguinte:
 quando saio com o carro, eu devo localizar, o checkout eu tenho que ideitificar um carro para que eu retorne um preço, pelo tempo que o carro permaneceu parado
+
+
+===========================================================
+
+Agora chegamos no ponto que queriamos:
+
+repare que temos uma mistura, e para quem pensou em ports and adapter por volta de 1994, isso pode parecer para alguns algo inlusório, e outros já visto, mas isso acontece em diferentes niveis, na interface grafica, dentro de uma api, dentro de um package.
+
+a ideia é que sua aplicação guiasse dispositivos de IO de forma mais livre, não deveria estar acoplado a um banco de dados especifico.
+
+e nesse momento eu possuo dois problemas, eu não posso testar no nivel de application, pois fico amarrado a api, a um client, não podendo variar o dispositivo de entrada e saida, porque tenho a regra de negocio acoplada.
+
+Esse é um territorio muito fertil para que possamos explorar, e agora podemos refatorar rumo a ports and adapter
+
+=============================================================
+
+Primeira coisa que tenho q fazer, qual é o usecase
+
+
+domain: 
+
+parked car
+
+uses cases: (algo super neutro) aqui é api que a sua aplicação expoe, não é a api webservice, que você está usando
+
+check-in (placa) ok
+checkout (placa) : price
+getParkedCars
+
+é o checking.
+
+a partir desse momento eu mudo completamente a interface, porque agora eu posso ter um checking de teste, não mais por meio de um client especifico, mas pela camada de aplicação, na borda do hexagono.
+Se pensarmos no hexagono, as bordas que ele tem, uma delas é o checking

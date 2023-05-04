@@ -5,5 +5,23 @@
     <Transaction>2023/04/28 11:40:08.000.152,C:\Users\aleme\OneDrive\Documentos\Embarcadero\Studio\Projects\Project1.dproj=C:\Users\aleme\OneDrive\Documentos\Embarcadero\Studio\Projects\porstandadapter.test.dproj</Transaction>
     <Transaction>2023/04/28 11:41:13.000.484,C:\Users\aleme\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.pas=D:\MyRepository\ports-and-adapter-delphi\test\portsandadpter.test.pas</Transaction>
     <Transaction>2023/04/28 11:41:22.000.061,C:\Users\aleme\OneDrive\Documentos\Embarcadero\Studio\Projects\porstandadapter.test.dproj=D:\MyRepository\ports-and-adapter-delphi\test\porstandadapter.test.dproj</Transaction>
+    <Transaction>2023/05/03 13:12:04.000.862,=D:\MyRepository\ports-and-adapter-delphi\test\Unit1.pas</Transaction>
+    <Transaction>2023/05/03 13:13:00.000.532,D:\MyRepository\ports-and-adapter-delphi\test\Unit1.pas=D:\MyRepository\ports-and-adapter-delphi\test\portsandadpter.checking.test.pas</Transaction>
+    <Transaction>2023/05/03 17:52:55.994,=D:\MyRepository\ports-and-adapter-delphi\console\portsandadapter.checking.pas</Transaction>
+    <Transaction>2023/05/03 17:52:56.028,=D:\MyRepository\ports-and-adapter-delphi\console\portsandadapter.checkout.pas</Transaction>
+    <Transaction>2023/05/03 17:52:56.061,=D:\MyRepository\ports-and-adapter-delphi\console\portsandadapter.getparkedcars.pas</Transaction>
+    <Transaction>2023/05/03 17:52:56.137,=D:\MyRepository\ports-and-adapter-delphi\console\portsandadapter.input.pas</Transaction>
+    <Transaction>2023/05/03 17:53:29.526,D:\MyRepository\ports-and-adapter-delphi\console\portsandadapter.checking.pas=</Transaction>
+    <Transaction>2023/05/03 17:53:29.596,D:\MyRepository\ports-and-adapter-delphi\console\portsandadapter.checkout.pas=</Transaction>
+    <Transaction>2023/05/03 17:53:29.643,D:\MyRepository\ports-and-adapter-delphi\console\portsandadapter.getparkedcars.pas=</Transaction>
+    <Transaction>2023/05/03 17:53:29.690,D:\MyRepository\ports-and-adapter-delphi\console\portsandadapter.input.pas=</Transaction>
+    <Transaction>2023/05/03 17:58:51.109,=D:\MyRepository\ports-and-adapter-delphi\console\portsandadapter.checking.pas</Transaction>
+    <Transaction>2023/05/03 17:59:12.493,=D:\MyRepository\ports-and-adapter-delphi\console\connection.pas</Transaction>
+    <Transaction>2023/05/03 17:59:12.536,=D:\MyRepository\ports-and-adapter-delphi\console\portsandadapter.checkout.pas</Transaction>
+    <Transaction>2023/05/03 17:59:12.588,=D:\MyRepository\ports-and-adapter-delphi\console\portsandadapter.getparkedcars.pas</Transaction>
+    <Transaction>2023/05/03 17:59:12.613,=D:\MyRepository\ports-and-adapter-delphi\console\portsandadapter.input.pas</Transaction>
+    <Transaction>2023/05/03 18:10:59.476,D:\MyRepository\ports-and-adapter-delphi\test\portsandadpter.test.pas=</Transaction>
+    <Transaction>2023/05/03 18:14:11.922,=D:\MyRepository\ports-and-adapter-delphi\test\portsandadpter.test.pas</Transaction>
+    <Transaction>2023/05/03 18:23:58.809,D:\MyRepository\ports-and-adapter-delphi\test\portsandadpter.test.pas=</Transaction>
   </Transactions>
 </BorlandProject>

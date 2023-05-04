@@ -12,7 +12,11 @@ uses
   System.SysUtils,
   System.DateUtils,
   DataSet.Serialize,
-  connection in 'connection.pas' {DataModule1: TDataModule};
+  connection in 'connection.pas' {DataModule1: TDataModule},
+  portsandadapter.checking in 'portsandadapter.checking.pas',
+  portsandadapter.checkout in 'portsandadapter.checkout.pas',
+  portsandadapter.getparkedcars in 'portsandadapter.getparkedcars.pas',
+  portsandadapter.input in 'portsandadapter.input.pas';
 
 var
   App: THorse;
@@ -32,11 +36,11 @@ begin
     try
       lBody := TJSONObject.ParseJSONValue(Req.Body) as TJsonObject;
 
-      lConnection.FDQuery1.SQl.Clear;
-      lConnection.FDQuery1.SQL.Add('insert into parcked_car (plate, checking_date) values (?, ?)');
-      lConnection.FDQuery1.Params[0].Value := lBody.GetValue<String>('plate');
-      lConnection.FDQuery1.Params[1].Value := ISO8601ToDate(lBody.GetValue<String>('checkinDate'));
-      lConnection.FDQuery1.ExecSQL;
+//      lConnection.FDQuery1.SQl.Clear;
+//      lConnection.FDQuery1.SQL.Add('insert into parcked_car (plate, checking_date) values (?, ?)');
+//      lConnection.FDQuery1.Params[0].Value := lBody.GetValue<String>('plate');
+//      lConnection.FDQuery1.Params[1].Value := ISO8601ToDate(lBody.GetValue<String>('checkinDate'));
+//      lConnection.FDQuery1.ExecSQL;
 
       Res.Status(200);
     finally
