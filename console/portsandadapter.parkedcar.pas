@@ -5,6 +5,7 @@ interface
 uses
   System.SysUtils,
   System.JSON,
+  System.DateUtils,
   System.Generics.Collections,
   GBJSON.Interfaces;
 
@@ -14,6 +15,8 @@ type
     FPlate: String;
     FCheckinDate: TDateTime;
     FCheckoutDate: TDateTime;
+    FPrice: Currency;
+    FDiff: Integer;
 
     constructor Create(aPlate: String; aCheckinDate: TDateTime); overload;
     constructor Create(aPlate: String; aCheckinDate: TDateTime; aCheckoutDate: TDateTime); overload;
@@ -21,10 +24,13 @@ type
     property Plate: String read FPlate write FPlate;
     property CheckinDate: TDateTime read FCheckinDate write FCheckinDate;
     property CheckoutDate: TDateTime read FCheckoutDate write FCheckoutDate;
+    property Price: Currency read FPrice write FPrice;
+    property Diff: Integer read FDiff write FDiff;
 
     class function New: TParkedCar; overload;
     class function New(aPlate: String; aCheckinDate: TDateTime): TParkedCar; overload;
     class function New(aPlate: String; aCheckinDate: TDateTime; aCheckoutDate: TDateTime): TParkedCar; overload;
+    procedure Checkout(aCheckoutDate: TDateTime);
   end;
 
   TParkedCarHelper = class helper for TParkedCar
@@ -42,6 +48,12 @@ constructor TParkedCar.Create(aPlate: String; aCheckinDate: TDateTime);
 begin
   FPlate := aPlate;
   FCheckinDate := aCheckinDate;
+end;
+
+procedure TParkedCar.Checkout(aCheckoutDate: TDateTime);
+begin
+  FDiff := HourOf(aCheckoutDate.GetTime - Self.CheckinDate.GetTime);
+  Fprice := (diff * 10);
 end;
 
 constructor TParkedCar.Create(aPlate: String; aCheckinDate, aCheckoutDate: TDateTime);

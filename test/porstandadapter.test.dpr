@@ -13,8 +13,6 @@ uses
   DUnitX.Loggers.Xml.NUnit,
   {$ENDIF }
   DUnitX.TestFramework,
-//  portsandadpter.test in 'portsandadpter.test.pas',
-  connection in '..\console\connection.pas' {DataModule1: TDataModule},
   portsandadapter.checking in '..\console\portsandadapter.checking.pas',
   portsandadapter.checkout in '..\console\portsandadapter.checkout.pas',
   portsandadapter.getparkedcars in '..\console\portsandadapter.getparkedcars.pas',
@@ -23,7 +21,11 @@ uses
   portsandadapter.parkedcardatabaserepository in '..\console\portsandadapter.parkedcardatabaserepository.pas',
   portsandadapter.parkedcarrepository in '..\console\portsandadapter.parkedcarrepository.pas',
   portsandadapter.parkedcarmemoryrepository in '..\console\portsandadapter.parkedcarmemoryrepository.pas',
-  portsandadpter.checking.test in 'portsandadpter.checking.test.pas';
+  portsandadpter.checking.test in 'portsandadpter.checking.test.pas',
+  portsandadpter.checkout.test in 'portsandadpter.checkout.test.pas',
+//  portsandadpter.test in 'portsandadpter.test.pas',
+  connection in '..\console\connection.pas' {DataModule1: TDataModule},
+  portsandadapter.connection in '..\console\portsandadapter.connection.pas';
 
 {$IFNDEF TESTINSIGHT}
 var

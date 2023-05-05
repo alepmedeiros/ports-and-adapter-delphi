@@ -27,6 +27,8 @@
     <Transaction>2023/05/04 13:13:24.520,D:\MyRepository\ports-and-adapter-delphi\console\portsandadapter.parkedcardatabaserepository.pas=D:\MyRepository\ports-and-adapter-delphi\console\Unit1.pas</Transaction>
     <Transaction>2023/05/04 14:19:04.160,=D:\MyRepository\ports-and-adapter-delphi\console\Unit1.pas</Transaction>
     <Transaction>2023/05/04 14:20:42.396,D:\MyRepository\ports-and-adapter-delphi\console\portsandadapter.parkedcarmemoryrepository.pas=D:\MyRepository\ports-and-adapter-delphi\console\Unit1.pas</Transaction>
+    <Transaction>2023/05/04 16:20:17.428,=D:\MyRepository\ports-and-adapter-delphi\console\Unit1.pas</Transaction>
+    <Transaction>2023/05/04 16:22:05.233,D:\MyRepository\ports-and-adapter-delphi\console\portsandadapter.connection.pas=D:\MyRepository\ports-and-adapter-delphi\console\Unit1.pas</Transaction>
   </Transactions>
 	<ProjectSortOrder AutoSort="0" SortType="0">
     <File Path="connection.pas"/>
@@ -39,5 +41,6 @@
     <File Path="portsandadapter.parkedcar.pas"/>
     <File Path="portsandadapter.parkedcardatabaserepository.pas"/>
     <File Path="portsandadapter.parkedcarmemoryrepository.pas"/>
+    <File Path="portsandadapter.connection.pas"/>
   </ProjectSortOrder>
 </BorlandProject>

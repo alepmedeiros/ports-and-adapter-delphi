@@ -13,7 +13,8 @@ uses
   GBJSON.Interfaces,
   portsandadapter.parkedcar,
   portsandadapter.parkedcardatabaserepository,
-  portsandadapter.parkedcarrepository, portsandadapter.parkedcarmemoryrepository;
+  portsandadapter.parkedcarrepository, portsandadapter.parkedcarmemoryrepository,
+  connection;
 
 type
 
@@ -37,10 +38,13 @@ begin
     // agora iremos criar as chamadas para o repository, onde passamos a dependecia
     // via inversão
 
-//  var parkedCar := TParkedCarRepository.New;
+    //aqui passamos a connection para usarmos a inversão de dependencia
+
+  var lConnection := TDataModule1.New;
+  var parkedCar := TParkedCarRepository.New(lConnection);
 // neste momento alteramos para memoria, para que não tenhamos a dependencia de
 // persistencia no banco de dados
-  var parkedCar := TParkedCarMemoryRepository.New;
+//  var parkedCar := TParkedCarMemoryRepository.New;
 
   var
     lCheckin: TCheckin := TCheckin.New(parkedCar);
@@ -73,6 +77,8 @@ begin
     ticket: TOutPut := checkout.execute(inputCheckout);
   Assert.AreEqual(2, ticket.Period);
   Assert.AreEqual<Currency>(20, ticket.Price);
+
+  lConnection.Close;
 end;
 
 procedure TAPITest.Setup;

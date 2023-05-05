@@ -53,28 +53,17 @@ begin
 //    chekingDate: TDateTime := FDados.FDQuery1.FieldByName('checking_date')
 //      .AsDateTime;
 
-  var
-    chekingDate: TDateTime := parkedCar.CheckinDate;
 
-  var
-    checkoutDate: TDateTime :=
-      ISO8601ToDate(input.CheckoutDate);
-
-  var
-    diff: Integer := HourOf(checkoutDate.GetTime - chekingDate.GetTime);
-
-  var
-    price: Currency := (diff * 10);
-
+// agora eu pego o checkout e passo o checkoutdate para que a entidade faça o trabalho da validação
+  parkedCar.Checkout(ISO8601ToDate(input.CheckoutDate));
 
   // após toda essa regrinha, eu tenho
   FParkedCarRepository.Update(parkedCar);
 
   var lOutPut: TOutput := TOutput.New;
 
-
-  lOutPut.Price := price;
-  lOutPut.Period := diff;
+  lOutPut.Price := parkedCar.Price;
+  lOutPut.Period := parkedCar.diff;
 
   Result := lOutPut;
 end;

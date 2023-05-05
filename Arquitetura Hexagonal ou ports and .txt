@@ -170,3 +170,29 @@ nesse momento não estamos usando DDD, nem clean arch, não temos uma papel de u
 ai ao olharmos para a camada freamworks and drivers o horse, fdconnection, dentro da camada verde, não separamos ela mas temos os repositorios, poderiamos ter um roteador, e na camada vermelha os usescases, e no meio entitys, mas não temos as entitys, não estamos reusando nada.
 
 =====================================================================================================
+
+então poderiamos pessar em algumas coisas, eu tenho uma operação de checkout.
+
+e dentro do parkedcar eu dicesse assim: esse parked car terá a ação de fazer o checkou.
+
+agora temo uma operação de negocio funcionando.
+
+qual foi o movimento que fizemos agora que é bem interessante, eu tinha regra de negocio dentro do use case, use case na essencia, depende da linha de raciocinio, ports and adapter não diz nada a respeito disso, agora clean arch ja vai dizer o seguinte: use case é um orquestrador, que executa a regra de negocio indenpendente é a entidade.
+
+O que fizemos é levar para entidade a responsabilidade por executar um procesimento de chackout, isso abre possibilidades de ter um teste de unidade.
+
+entendeu que o certo desde o inicio era ter começado por aqui?
+
+ai eu teria a independencia de testar o meu negocio, testar meu dominio, fazer com que o dominio funcione, para dai entender pra onde esse meu dominio se aplica, ou seja, se aplica no checkout, o checkout é um orquestrador, que interage com recursos da aplicação, invertendo dependencia, e ai vou indo para fora;
+
+se ainda pensarmos em clean architecture, essas separações entre frameworks and drivers e interfaces adapters, e isso é um ponto de resalto de diferença entre os dois, não só a tendencia de você centrar no dominio mas tambem do lado de fora, se pararmos para pensar, eu tenho um acoplamento entre frames and drivers, e interfaces adapters, eles estão muito proximos, como é que podemos tirar eles do repositorio.
+
+criaremos um connection, ele será uma interface.  
+
+observe que estamos desasociando de um conceito de baixo nivel?
+
+Desta forma retiramos o acoplamento, onde eu separo a parte verde do clean architectura, criei uma porta.
+
+quando eu for passar essa conection, agora faz sentido nós olharmos tanto para teste quanto para o main.
+
+agora você observa que já não consigo instanciar mais sem passar a connection, e o mais legal que criei uma interface no new do proprio datamodule

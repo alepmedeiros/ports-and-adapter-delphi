@@ -20,7 +20,8 @@ uses
   portsandadapter.parkedcarrepository in 'portsandadapter.parkedcarrepository.pas',
   portsandadapter.parkedcar in 'portsandadapter.parkedcar.pas',
   portsandadapter.parkedcardatabaserepository in 'portsandadapter.parkedcardatabaserepository.pas',
-  portsandadapter.parkedcarmemoryrepository in 'portsandadapter.parkedcarmemoryrepository.pas';
+  portsandadapter.parkedcarmemoryrepository in 'portsandadapter.parkedcarmemoryrepository.pas',
+  portsandadapter.connection in 'portsandadapter.connection.pas';
 
 var
   App: THorse;
@@ -32,7 +33,7 @@ begin
 
   // agora iremos criar as chamadas para o repository, onde passamos a dependecia
   // via inversão
-  var parkedCar := TParkedCarRepository.New;
+  var parkedCar := TParkedCarRepository.New(TDataModule1.New);
 
   App
   .Post('/checking', procedure(Req: THorseRequest; Res: THorseResponse)
