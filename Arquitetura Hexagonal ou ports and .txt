@@ -196,3 +196,20 @@ Desta forma retiramos o acoplamento, onde eu separo a parte verde do clean archi
 quando eu for passar essa conection, agora faz sentido nós olharmos tanto para teste quanto para o main.
 
 agora você observa que já não consigo instanciar mais sem passar a connection, e o mais legal que criei uma interface no new do proprio datamodule
+
+Esse ultimo processo está mais atrelado ao CA, de bob martim de separar framwork and drivers de interface adapter, podendo aplicar a mesma estratégia para os controllers.
+
+=================================================================================================================================================
+
+Resumindo tudo
+
+Pegamos uma aplicação totalmente acoplada, que não poderia ser dirigida por diferent tipos de atores, e nem definir melhor diferente dispositivos de entrada e saida.
+
+nós começamos a refatorar, onde derivou as portas de entrada, os casos de uso, estabelecemos nossa api de aplication, tanto api quanto os testes, na api da application.
+
+dai nós injetamos, invertendo a independencia, trouxe repositorio, se eu mandasse um e-mail, ou um evento em fila eu faria a mesma coisa.
+
+trouxemos no final um toque de clean arch para implementar a parte interna, não um CA, mas um CA/DDD, não estamos tão opnativos com agregate.
+
+Tb trouxemos a dependecia para o core da aplicação.
+
